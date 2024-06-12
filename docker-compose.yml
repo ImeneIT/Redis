@@ -1,0 +1,37 @@
+---
+version: "3"
+services:
+  ## Zipkin
+#  zipkin:
+#    image: openzipkin/zipkin
+#    container_name: zipkin
+#    restart: always
+#    ports:
+#      - "9411:9411"
+
+  ## redis
+  redis:
+    image: redis
+    container_name: redis
+    restart: always
+    ports:
+      - "7001:6379"
+
+  ## Prometheus
+#  prometheus:
+#    image: prom/prometheus:v2.37.1
+#    container_name: prometheus
+#    restart: always
+#    ports:
+#      - "9090:9090"
+#    volumes:
+#      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+
+  ## RabbitMQ configuration
+#  rabbitmq:
+#    image: rabbitmq:3.12-management
+#    container_name: rabbitmq
+#    restart: always
+#    ports:
+#      - "5672:5672"
+#      - "15672:15672"
